@@ -1,0 +1,37 @@
+1. Используя команду cat в терминале операционной системы Linux, создать
+два файла Домашние животные (заполнив файл собаками, кошками,
+хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и
+ослы), а затем объединить их. Просмотреть содержимое созданного файла.
+Переименовать файл, дав ему новое имя (Друзья человека).
+
+natalya@eater:~/dz$ sudo cat>домашние_животные
+natalya@eater:~/dz$ sudo cat>вьючные_животные
+natalya@eater:~/dz$ sudo cat домашние_животные вьючные_животные > все_животные
+natalya@eater:~/dz$ sudo cat все_животные
+собака Лина
+кошка Пушка
+хомяк Жора
+верблюд Антон
+верблюд Нюта
+лошадь Антонина
+осел Вася
+natalya@eater:~/dz$ mv все_животные Друзья_человека
+
+2. Создать директорию, переместить файл туда.
+natalya@eater:~/dz$ cd ..
+natalya@eater:~$ mkdir dz2
+natalya@eater:~/dz$ mv Друзья_человека /home/natalya/dz2
+
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+natalya@eater:~/dz$ sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.23-1_all.deb
+natalya@eater:~/dz$ sudo dpkg -i mysql-apt-config_0.8.23-1_all.deb
+natalya@eater:~/dz$ sudo apt-get update
+natalya@eater:~/dz$ sudo apt-get install mysql-workbench-community
+
+4. Установить и удалить deb-пакет с помощью dpkg.
+natalya@eater:~/Загрузки$ sudo dpkg -i docker-desktop-4.21.1-amd64.deb
+natalya@eater:~/Загрузки$ sudo dpkg -r docker-desktop
+
+
